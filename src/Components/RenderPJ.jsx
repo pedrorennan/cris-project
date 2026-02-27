@@ -1,14 +1,12 @@
 import regras from "../Data/rules.json"
 
 function RenderPJ({name, className, nex}) {
-    const dadosClasse = className
-        ? regras.classes.find((c) => c.name.toLowerCase() === className.toLowerCase())
-        : null
+    const agents = JSON.parse()
 
     return (
         <div className="renderPJ">
             <p><strong>Nome:</strong> {name}</p>
-            <p><strong>Class:</strong> {dadosClasse.name}</p>
+            <p><strong>Class:</strong> {className}</p>
             <p><strong>Nex:</strong> {nex}</p>
         </div>
     )

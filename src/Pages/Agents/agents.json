@@ -1,0 +1,10 @@
+{
+    "agentes": [
+        {
+            "id": "rennan",
+            "nome": "Rennan",
+            "classe": "Combatente",
+            "nex": 15
+        }
+    ]
+}

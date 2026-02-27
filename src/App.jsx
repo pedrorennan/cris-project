@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Home from "./Pages/Home";
-import Agents from "./Pages/PJSheets";
+import Agents from "./Pages/Agents";
 
 function App() {
     const [page, setPage] = useState("home")
