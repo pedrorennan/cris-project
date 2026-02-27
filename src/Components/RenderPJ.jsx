@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import regras from "../Data/rules.json"
 
 function RenderPJ() {
     const [agents, setAgents] = useState([])

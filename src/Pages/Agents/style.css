@@ -5,6 +5,7 @@
     width: 100vw;
     height: 100vh;
     padding: 1rem;
+    gap: 2rem;
 }
 
 .createPJ {
@@ -17,5 +18,17 @@
 
 .createPJ input {
     width: 40%;
+}
+
+.agents-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.card-agente {
+    background-color: #494949;
+    padding: 10px;
+    border-radius: 10%;
 }
 
