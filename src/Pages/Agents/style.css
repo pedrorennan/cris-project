@@ -66,7 +66,31 @@ main {
 .card-agente-btn:hover {
     border-color: #ff0000;
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
     cursor: pointer;
 }
 
+.containerViewSheet {
+    display: flex;
+    flex-direction: column;
+}
+
+.atributes {
+    width: 20%;
+    display: grid;
+    grid-template-areas: 
+    '. agi .'
+    'for . int'
+    'vig . pres';
+    text-align: center;
+    padding: 1rem;
+}
+
+.atribute {
+    border: none;
+    background: none;
+}
+
+.atribute:hover {
+    cursor: pointer;
+    color: plum;
+}

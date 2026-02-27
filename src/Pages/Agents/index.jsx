@@ -1,6 +1,6 @@
 import CreatePJ from "../../Components/CreatePJ";
 import RenderPJ from "../../Components/RenderPJ";
-import ViewSheet from "./ViewSheet"
+import ViewSheet from "../../Components/ViewSheet"
 import './style.css'
 import { useState, useEffect } from "react";
 
