@@ -1,9 +1,18 @@
 import { useState } from "react"
+import Atributes from "./Atributes";
 
 function CreatePJ({ sheetDone }) {
     const [namePJ, setName] = useState("")
     const [classPJ, setClass] = useState("")
     const [nexPJ, setNex] = useState("")
+
+    const [atributes, setAtributes] = useState({
+        forca: 0,
+        agilidade: 0,
+        vigor: 0,
+        intelecto: 0,
+        presenca: 0
+    })
 
     const save = () => {
         if (namePJ && classPJ && nexPJ) {
@@ -11,7 +20,8 @@ function CreatePJ({ sheetDone }) {
                 id: namePJ,
                 nome: namePJ,
                 className: classPJ,
-                nex: nexPJ
+                nex: nexPJ,
+                atributos: atributes
             }
             const atualAgents = JSON.parse(localStorage.getItem("agentes")) || [];
 
@@ -30,6 +40,7 @@ function CreatePJ({ sheetDone }) {
             <input type="text" value={namePJ} onChange={(e) => { setName(e.target.value) }} placeholder='Nome do Agente' />
             <input type="text" value={classPJ} onChange={(e) => { setClass(e.target.value) }} placeholder='Classe do Agente' />
             <input type="text" value={nexPJ} onChange={(e) => { setNex(Number(e.target.value)) }} placeholder='NEX do Agente' />
+            <Atributes atributes={atributes} setAtributes={setAtributes}/>
             <button onClick={save}>
                 Criar Agente
             </button>
