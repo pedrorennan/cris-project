@@ -3,7 +3,7 @@ import { useState } from "react"
 function CreatePJ({ sheetDone }) {
     const [namePJ, setName] = useState("")
     const [classPJ, setClass] = useState("")
-    const [nexPJ, setNex] = useState(Number)
+    const [nexPJ, setNex] = useState("")
 
     const save = () => {
         if (namePJ && classPJ && nexPJ) {
@@ -27,14 +27,12 @@ function CreatePJ({ sheetDone }) {
 
     return (
         <div className="createPJ">
-            <div>
-                <input type="text" value={namePJ} onChange={(e) => { setName(e.target.value) }} placeholder='Nome do Agente' />
-                <input type="text" value={classPJ} onChange={(e) => { setClass(e.target.value) }} placeholder='Classe do Agente' />
-                <input type="number" value={nexPJ} onChange={(e) => { setNex(e.target.value) }} placeholder='NEX do Agente' />
-                <button onClick={save}>
-                    Criar Personagem
-                </button>
-            </div>
+            <input type="text" value={namePJ} onChange={(e) => { setName(e.target.value) }} placeholder='Nome do Agente' />
+            <input type="text" value={classPJ} onChange={(e) => { setClass(e.target.value) }} placeholder='Classe do Agente' />
+            <input type="text" value={nexPJ} onChange={(e) => { setNex(Number(e.target.value)) }} placeholder='NEX do Agente' />
+            <button onClick={save}>
+                Criar Agente
+            </button>
         </div>
     )
 }
