@@ -1,10 +1,16 @@
 import CreatePJ from "../../Components/CreatePJ";
 import RenderPJ from "../../Components/RenderPJ";
+import ViewSheet from "./ViewSheet"
 import './style.css'
 import { useState, useEffect } from "react";
 
 function Agents({ toHome }) {
+    const [selectedAgent, setSelectedAgent] = useState(null)
     const [showSheet, setShowSheet] = useState(true)
+
+    if (selectedAgent) {
+        return <ViewSheet agent={(selectedAgent)} toAgents={() => setSelectedAgent(null)}/>
+    }
 
     return (
         <div className="sheet-container">
@@ -14,7 +20,7 @@ function Agents({ toHome }) {
             </header>
             <main>
                 {showSheet ? (
-                    <RenderPJ />
+                    <RenderPJ selectAgent={(agente) => setSelectedAgent(agente)}/>
                 ) : (
                     <CreatePJ sheetDone={() => setShowSheet(true)} />
                 )}

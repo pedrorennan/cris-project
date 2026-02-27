@@ -6,7 +6,7 @@ function App() {
     const [page, setPage] = useState("home")
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        console.log(`Pagina ${page} carregada!`)
     }, [page])
 
     return (
