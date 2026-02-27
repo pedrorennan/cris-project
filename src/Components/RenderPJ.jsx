@@ -1,33 +1,15 @@
 import regras from "../Data/rules.json"
 
-function RenderPJ({setName, setClass, setNex}) {
-    const dadosClasse = setClass
-        ? regras.classes.find((c) => c.name.toLowerCase() === setClass.toLowerCase())
+function RenderPJ({name, className, nex}) {
+    const dadosClasse = className
+        ? regras.classes.find((c) => c.name.toLowerCase() === className.toLowerCase())
         : null
 
     return (
         <div className="renderPJ">
-            {setName ? (
-                <div>
-                    <h2>Nome: {setName}</h2>
-                </div>
-            ) : (
-                null
-            )}
-            {dadosClasse ? (
-                <div>
-                    <h2>Classe: {dadosClasse.name}</h2>
-                </div>
-            ) : (
-                setClass !== "" && <p>Classe não encontrada</p>
-            )}
-            {setNex ? (
-                <div>
-                    <h2>Nex: {setNex}%</h2>
-                </div>
-            ) : (
-                null
-            )}
+            <p><strong>Nome:</strong> {name}</p>
+            <p><strong>Class:</strong> {dadosClasse.name}</p>
+            <p><strong>Nex:</strong> {nex}</p>
         </div>
     )
 }
