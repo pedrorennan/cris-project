@@ -1,7 +1,7 @@
 import regras from "../Data/rules.json"
 
 function RenderPJ({name, className, nex}) {
-    const agents = JSON.parse()
+    const agents = JSON.parse(localStorage.getItem())
 
     return (
         <div className="renderPJ">
