@@ -4,6 +4,7 @@ function RenderPJ({setName, setClass, setNex}) {
     const dadosClasse = setClass
         ? regras.classes.find((c) => c.name.toLowerCase() === setClass.toLowerCase())
         : null
+
     return (
         <div className="renderPJ">
             {setName ? (

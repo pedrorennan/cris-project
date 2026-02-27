@@ -1,11 +1,6 @@
-.createPJ {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem;
-    gap: 10px;
-}
-
-.createPJ input {
-    width: 30%;
+    padding: 1rem;
 }

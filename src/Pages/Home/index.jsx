@@ -1,24 +1,16 @@
 import './style.css'
-import RenderPJ from "../../Components/RenderPJ.jsx"
+import CreatePJ from "../../Components/CreatePJ.jsx"
 import { useState } from 'react'
 
 function Home() {
-  const [showSheet, setShowSheet] = useState(false)
-
-  const [namePJ, setName] = useState("")
-  const [classPJ, setClass] = useState("")
-  const [nexPJ, setNex] = useState(0)
+  const [createSheet, setCreateSheet] = useState(false)
 
   return (
-    <div className="createPJ">
-      <input type="text" value={namePJ} onChange={(e) => {setName(e.target.value)}} placeholder='Nome do Agente'/>
-      <input type="text" value={classPJ} onChange={(e) => {setClass(e.target.value)}} placeholder='Classe do Agente'/>
-      <input type="number" value={nexPJ} onChange={(e) => {setNex(e.target.value)}} placeholder='NEX do Agente' min="0" max="99"/>
-      <button onClick={() => setShowSheet(true)}>
-        Criar Personagem
-      </button>
-      {showSheet && (
-        <RenderPJ setName={namePJ} setClass={classPJ} setNex={nexPJ}/>
+    <div class="container">
+      <h1>C.R.I.S</h1>
+      <button onClick={() => {setCreateSheet(true)}}>Criar novo personagem</button>
+      {createSheet && (
+        <CreatePJ/>
       )}
     </div>
   )
