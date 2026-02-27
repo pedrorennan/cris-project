@@ -1,10 +1,29 @@
 import { useState } from "react"
-import RenderPJ from "./RenderPJ"
 
-function CreatePJ() {
+function CreatePJ({ sheetDone }) {
     const [namePJ, setName] = useState("")
     const [classPJ, setClass] = useState("")
     const [nexPJ, setNex] = useState(Number)
+
+    const save = () => {
+        if (namePJ && classPJ && nexPJ) {
+            const newAgent = {
+                id: namePJ,
+                nome: namePJ,
+                className: classPJ,
+                nex: nexPJ
+            }
+            const atualAgents = JSON.parse(localStorage.getItem("agentes")) || [];
+
+            const attAgents = [...atualAgents, newAgent];
+
+            localStorage.setItem("agentes", JSON.stringify(attAgents));
+
+            sheetDone()
+        } else {
+            alert("Preeencha todos os campos...")
+        }
+    }
 
     return (
         <div className="createPJ">
@@ -12,19 +31,7 @@ function CreatePJ() {
                 <input type="text" value={namePJ} onChange={(e) => { setName(e.target.value) }} placeholder='Nome do Agente' />
                 <input type="text" value={classPJ} onChange={(e) => { setClass(e.target.value) }} placeholder='Classe do Agente' />
                 <input type="number" value={nexPJ} onChange={(e) => { setNex(e.target.value) }} placeholder='NEX do Agente' />
-                <button onClick={() => {
-                    if (namePJ && classPJ && nexPJ) {
-                        const newAgent = {
-                            id: namePJ,
-                            nome: namePJ,
-                            className: classPJ,
-                            nex: nexPJ 
-                        }
-                        localStorage.setItem((`agente_${namePJ}`), JSON.stringify(newAgent))
-                    } else {
-                        alert("Preeencha todos os campos...")
-                    }
-                }}>
+                <button onClick={save}>
                     Criar Personagem
                 </button>
             </div>
