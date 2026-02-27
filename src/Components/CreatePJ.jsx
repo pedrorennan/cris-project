@@ -37,10 +37,14 @@ function CreatePJ({ sheetDone }) {
 
     return (
         <div className="createPJ">
-            <input type="text" value={namePJ} onChange={(e) => { setName(e.target.value) }} placeholder='Nome do Agente' />
-            <input type="text" value={classPJ} onChange={(e) => { setClass(e.target.value) }} placeholder='Classe do Agente' />
-            <input type="text" value={nexPJ} onChange={(e) => { setNex(Number(e.target.value)) }} placeholder='NEX do Agente' />
-            <Atributes atributes={atributes} setAtributes={setAtributes}/>
+            <div className="inputs">
+                <div>
+                    <input type="text" value={namePJ} onChange={(e) => { setName(e.target.value) }} placeholder='Nome do Agente' />
+                    <input type="text" value={classPJ} onChange={(e) => { setClass(e.target.value) }} placeholder='Classe do Agente' />
+                    <input type="text" value={nexPJ} onChange={(e) => { setNex(Number(e.target.value)) }} placeholder='NEX do Agente' />
+                </div>
+                <Atributes atributes={atributes} setAtributes={setAtributes} />
+            </div>
             <button onClick={save}>
                 Criar Agente
             </button>

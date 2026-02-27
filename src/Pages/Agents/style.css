@@ -15,7 +15,6 @@ main {
     gap: 20px;
 }
 
-
 .createPJ {
     display: flex;
     flex-direction: column;
@@ -26,6 +25,30 @@ main {
 
 .createPJ input, button {
     width: 100%;
+}
+
+.atributesInputs {
+    width: 40%;
+    display: grid;
+    grid-template-areas: 
+    '. agi .'
+    'for . int'
+    'vig . pres';
+    gap: 10px;
+    justify-items: center; 
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+}
+
+#agi { grid-area: agi; width: 40%; display: flex; align-items: center; flex-direction: column;}
+#for { grid-area: for; width: 40%; display: flex; align-items: center; flex-direction: column;}
+#int { grid-area: int; width: 40%; display: flex; align-items: center; flex-direction: column;}
+#vig { grid-area: vig; width: 40%; display: flex; align-items: center; flex-direction: column;}
+#pre { grid-area: pres; width: 40%; display: flex; align-items: center; flex-direction: column;}
+
+.atributesInputs input {
+    border-radius: 20%;
 }
 
 .agents-list {
