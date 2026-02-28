@@ -1,5 +1,6 @@
 import "../Pages/Agents/style.css"
 import RollDice from "../Utils/RollDice"
+import Skills from './Skills'
 
 function ViewSheet({ agent, toAgents }) {
     return (
@@ -22,6 +23,10 @@ function ViewSheet({ agent, toAgents }) {
                         <p id="int">INT: <button onClick={() => RollDice(20, agent.atributos.intelecto)} className="atribute">{agent.atributos.intelecto}</button></p>
                         <p id="pre">PRE: <button onClick={() => RollDice(20, agent.atributos.presenca)} className="atribute">{agent.atributos.presenca}</button>   </p>
                     </div>
+                </div>
+                <div className="skillsInfo">
+                    <h3>Habilidades</h3>
+                    <Skills className={String(agent.className)}></Skills>
                 </div>
             </main>
             <footer>
