@@ -51,6 +51,7 @@ function CreatePJ({ sheetDone }) {
             <button onClick={save}>
                 Criar Agente
             </button>
+            <button onClick={() => sheetDone()}>Voltar pra Agentes</button>
         </div>
     )
 }
