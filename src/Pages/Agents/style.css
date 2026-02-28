@@ -93,19 +93,18 @@ main {
 }
 
 .atributes {
-    width: 20%;
+    width: 30%;
     display: grid;
     grid-template-areas: 
     '. agi .'
     'for . int'
     'vig . pres';
     text-align: center;
-    padding: 1rem;
 }
 
 .atribute {
     border: none;
-    background: none;
+    border-radius: 5%;
 }
 
 .atribute:hover {

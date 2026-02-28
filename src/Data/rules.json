@@ -4,50 +4,146 @@
             "id": "combatente",
             "name": "Combatente",
             "descricao": "Guerreiros que enfrentam o paranormal com força física.",
-            "status_iniciais": { "pv": 20, "pe": 2, "san": 12, "pericias": 2},
-            "ganho_por_nivel": { "pv": 4, "pe": 2, "san": 3 },
+            "status_iniciais": {
+                "pv": 20,
+                "pe": 2,
+                "san": 12,
+                "pericias": 2
+            },
+            "ganho_por_nivel": {
+                "pv": 4,
+                "pe": 2,
+                "san": 3
+            },
             "trilhas": [
-                { "nome": "Aniquilador", "efeito": "Especialista em armas", 
-                    "poderesTrilha": [
+                {
+                    "nome": "Aniquilador",
+                    "efeito": "Especialista em armas",
+                    "poderes_trilha": [
                         {
-                            "nome": "A Favorita", "NEX": 10, "efeito": "Escolha uma arma para ser sua favorita, como katana ou fuzil de assalto. A categoria da arma escolhida é reduzida em I."
-                        }, {
-                            "nome": "Técnica Secreta", "NEX": 40, "efeito": "A categoria da arma favorita passa a ser reduzida em II. "
+                            "nome": "A Favorita",
+                            "NEX": 10,
+                            "efeito": "Escolha uma arma para ser sua favorita, como katana ou fuzil de assalto. A categoria da arma escolhida é reduzida em I."
+                        },
+                        {
+                            "nome": "Técnica Secreta",
+                            "NEX": 40,
+                            "efeito": "A categoria da arma favorita passa a ser reduzida em II. "
                         }
-                        ]
+                    ]
                 },
-                { "nome": "Tropa de Choque", "efeito": "Corpo blindado que aguenta briga", "poderes_trilha": { "nome": "Casca Grossa", "NEX": 10, "efeito": "+5 de PV."}}
+                {
+                    "nome": "Tropa de Choque",
+                    "efeito": "Corpo blindado que aguenta briga",
+                    "poderes_trilha": [
+                        {
+                            "nome": "Casca Grossa",
+                            "NEX": 10,
+                            "efeito": "+5 de PV."
+                        }
+                    ]
+                }
             ],
             "poderes_classe": [
-                { "nome": "Ataque Especial", "custo_pe": 2, "efeito": "+5 no teste de ataque ou dano"}
+                {
+                    "nome": "Ataque Especial",
+                    "custo_pe": 2,
+                    "efeito": "+5 no teste de ataque ou dano"
+                }
             ]
         },
         {
             "id": "especialista",
             "name": "Especialista",
             "descricao": "Agentes que utilizam mais do conhecimento",
-            "status_iniciais": { "pv": 16, "pe": 3, "san": 16, "pericias": 7},
-            "ganho_por_nivel": { "pv": 3, "pe": 3, "san": 4},
+            "status_iniciais": {
+                "pv": 16,
+                "pe": 3,
+                "san": 16,
+                "pericias": 7
+            },
+            "ganho_por_nivel": {
+                "pv": 3,
+                "pe": 3,
+                "san": 4
+            },
             "trilhas": [
-                { "nome": "Atirador de Elite", "efeito": "Especialista em armas de fogo", "poderes_trilha": { "nome": "Mira de Elite", "NEX": 10, "efeitoo": "Somar intelecto no dano."}},
-                { "nome": "Médico de Campo", "efeito": "Médico capaz de estabilizar e ajudar companheiros", "poderes_trilha": { "nome": "Paramédico", "NEX": 10, "efeitoo": "Gastar 2PE para curar 2d10 PV."}}
+                {
+                    "nome": "Atirador de Elite",
+                    "efeito": "Especialista em armas de fogo",
+                    "poderes_trilha": [
+                        {
+                            "nome": "Mira de Elite",
+                            "NEX": 10,
+                            "efeitoo": "Somar intelecto no dano."
+                        }
+                    ]
+                },
+                {
+                    "nome": "Médico de Campo",
+                    "efeito": "Médico capaz de estabilizar e ajudar companheiros",
+                    "poderes_trilha": [
+                        {
+                            "nome": "Paramédico",
+                            "NEX": 10,
+                            "efeitoo": "Gastar 2PE para curar 2d10 PV."
+                        }
+                    ]
+                }
             ],
             "poderes_classe": [
-                { "nome": "Eclético", "custo_pe": 2, "efeito": "Receber os benefícios de ser treinado em uma perícia."}
+                {
+                    "nome": "Eclético",
+                    "custo_pe": 2,
+                    "efeito": "Receber os benefícios de ser treinado em uma perícia."
+                }
             ]
         },
         {
             "id": "ocultista",
             "name": "Ocultista",
             "descricao": "Agentes que utilizam do paranormal contra o paranormal",
-            "status_iniciais": { "pv": 12, "pe": 4, "san": 20, "pericias": 3},
-            "ganho_por_nivel": { "pv": 2, "pe": 4, "san": 5},
+            "status_iniciais": {
+                "pv": 12,
+                "pe": 4,
+                "san": 20,
+                "pericias": 3
+            },
+            "ganho_por_nivel": {
+                "pv": 2,
+                "pe": 4,
+                "san": 5
+            },
+            "pericias": ["ocultismo", "luta"],
             "trilhas": [
-                { "nome": "Lâmina Paranormal", "efeito": "Paranormal no combate físico.", "poderes_trilha": { "nome": "Lâmina Maldita", "NEX": 10, "efeito": "Atacar com ocultismo."}},
-                { "nome": "Intuitivo", "efeito": "Mente e alma blindadas contra o Outro Lado.", "poderes_trilha": { "nome": "Mente Sã", "NEX": 10, "efeito": "+5 de Resistência Paranormal."}}
+                {
+                    "nome": "Lamina Paranormal",
+                    "efeito": "Paranormal no combate físico.",
+                    "poderes_trilha": [
+                        {
+                            "nome": "Lâmina Maldita",
+                            "NEX": 10,
+                            "efeito": "Atacar com ocultismo."
+                        }
+                    ]
+                },
+                {
+                    "nome": "Intuitivo",
+                    "efeito": "Mente e alma blindadas contra o Outro Lado.",
+                    "poderes_trilha": [
+                        {
+                            "nome": "Mente Sã",
+                            "NEX": 10,
+                            "efeito": "+5 de Resistência Paranormal."
+                        }
+                    ]
+                }
             ],
             "poderes_classe": [
-                { "nome": "Escolhido pelo Outro Lado", "efeito": "Aprender 3 rituais iniciais/+1 conforme sobe de NEX"}
+                {
+                    "nome": "Escolhido pelo Outro Lado",
+                    "efeito": "Aprender 3 rituais iniciais/+1 conforme sobe de NEX"
+                }
             ]
         }
     ]

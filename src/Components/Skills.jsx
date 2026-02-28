@@ -5,11 +5,9 @@ function Skills({ className, trilhaNome, nex }) {
     const trilha = classe.trilhas.find((e) => e.nome.toLowerCase() === trilhaNome.toLowerCase())
 
     const poderesClasse = classe.poderes_classe;
-    const poderesTrilha  = trilha.poderesTrilha.filter(n => n.NEX <= nex);
+    const poderesTrilha  = trilha.poderes_trilha.filter(n => n.NEX <= nex);
 
     const poderes = [...poderesClasse, ...poderesTrilha]
-
-    console.log(poderes)
     return (
         <div>
             {poderes.length > 0 ? (

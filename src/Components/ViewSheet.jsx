@@ -2,6 +2,7 @@ import "../Pages/Agents/style.css"
 import RollDice from "../Utils/RollDice"
 import Skills from './Skills'
 import DeletePJ from "../Utils/DeletePJ"
+import Pericias from "./Pericias"
 
 function ViewSheet({ agent, toAgents }) {
     return (
@@ -22,7 +23,7 @@ function ViewSheet({ agent, toAgents }) {
                     }}>Deletar personagem</button>
                 </div>
                 <div className="atributesInfo">
-                    <p>Atributos</p>
+                    <h3>Atributos</h3>
                     <div className="atributes">
                         <p id="for">FOR: <button onClick={() => RollDice(20, agent.atributos.forca)} className="atribute">{agent.atributos.forca}</button></p>
                         <p id="agi">AGI: <button onClick={() => RollDice(20, agent.atributos.agilidade)} className="atribute">{agent.atributos.agilidade}</button></p>
@@ -34,6 +35,10 @@ function ViewSheet({ agent, toAgents }) {
                 <div className="skillsInfo">
                     <h3>Habilidades</h3>
                     <Skills className={String(agent.className)} trilhaNome={String(agent.trilha)} nex={agent.nex}/>
+                </div>
+                <div className="periciasInfo">
+                    <h3>Pericias</h3>
+                    <Pericias className={agent.className}/>
                 </div>
             </main>
             <footer>
