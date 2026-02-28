@@ -20,11 +20,13 @@ function Agents({ toHome }) {
             </header>
             <main>
                 {showSheet ? (
-                    <RenderPJ selectAgent={(agente) => setSelectedAgent(agente)}/>
+                    <>
+                        <RenderPJ selectAgent={(agente) => setSelectedAgent(agente)}/>
+                        <button onClick={() => setShowSheet(false)}>Criar Novo Agente</button>
+                    </>
                 ) : (
                     <CreatePJ sheetDone={() => setShowSheet(true)} />
                 )}
-                <button onClick={() => setShowSheet(false)}>Criar Novo Agente</button>
             </main>
             <footer>
                 <button onClick={toHome}>Voltar para a página inicial</button>

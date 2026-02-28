@@ -7,8 +7,16 @@
             "status_iniciais": { "pv": 20, "pe": 2, "san": 12, "pericias": 2},
             "ganho_por_nivel": { "pv": 4, "pe": 2, "san": 3 },
             "trilhas": [
-                { "nome": "Aniquilador", "descricao": "Especialista em armas", "poderes_trilha": { "nome": "A Favorita", "NEX": 10, "descricao": "Categoria da arma reduzida em 1."}},
-                { "nome": "Tropa de Choque", "descricao": "Corpo blindado que aguenta briga", "poderes_trilha": { "nome": "Casca Grossa", "NEX": 10, "descricao": "+5 de PV."}}
+                { "nome": "Aniquilador", "efeito": "Especialista em armas", 
+                    "poderesTrilha": [
+                        {
+                            "nome": "A Favorita", "NEX": 10, "efeito": "Escolha uma arma para ser sua favorita, como katana ou fuzil de assalto. A categoria da arma escolhida é reduzida em I."
+                        }, {
+                            "nome": "Técnica Secreta", "NEX": 40, "efeito": "A categoria da arma favorita passa a ser reduzida em II. "
+                        }
+                        ]
+                },
+                { "nome": "Tropa de Choque", "efeito": "Corpo blindado que aguenta briga", "poderes_trilha": { "nome": "Casca Grossa", "NEX": 10, "efeito": "+5 de PV."}}
             ],
             "poderes_classe": [
                 { "nome": "Ataque Especial", "custo_pe": 2, "efeito": "+5 no teste de ataque ou dano"}
@@ -21,8 +29,8 @@
             "status_iniciais": { "pv": 16, "pe": 3, "san": 16, "pericias": 7},
             "ganho_por_nivel": { "pv": 3, "pe": 3, "san": 4},
             "trilhas": [
-                { "nome": "Atirador de Elite", "descricao": "Especialista em armas de fogo", "poderes_trilha": { "nome": "Mira de Elite", "NEX": 10, "descricao": "Somar intelecto no dano."}},
-                { "nome": "Médico de Campo", "descricao": "Médico capaz de estabilizar e ajudar companheiros", "poderes_trilha": { "nome": "Paramédico", "NEX": 10, "descricao": "Gastar 2PE para curar 2d10 PV."}}
+                { "nome": "Atirador de Elite", "efeito": "Especialista em armas de fogo", "poderes_trilha": { "nome": "Mira de Elite", "NEX": 10, "efeitoo": "Somar intelecto no dano."}},
+                { "nome": "Médico de Campo", "efeito": "Médico capaz de estabilizar e ajudar companheiros", "poderes_trilha": { "nome": "Paramédico", "NEX": 10, "efeitoo": "Gastar 2PE para curar 2d10 PV."}}
             ],
             "poderes_classe": [
                 { "nome": "Eclético", "custo_pe": 2, "efeito": "Receber os benefícios de ser treinado em uma perícia."}
@@ -35,8 +43,8 @@
             "status_iniciais": { "pv": 12, "pe": 4, "san": 20, "pericias": 3},
             "ganho_por_nivel": { "pv": 2, "pe": 4, "san": 5},
             "trilhas": [
-                { "nome": "Lâmina Paranormal", "descricao": "Paranormal no combate físico.", "poderes_trilha": { "nome": "Lâmina Maldita", "NEX": 10, "descricao": "Atacar com ocultismo."}},
-                { "nome": "Intuitivo", "descricao": "Mente e alma blindadas contra o Outro Lado.", "poderes_trilha": { "nome": "Mente Sã", "NEX": 10, "descricao": "+5 de Resistência Paranormal."}}
+                { "nome": "Lâmina Paranormal", "efeito": "Paranormal no combate físico.", "poderes_trilha": { "nome": "Lâmina Maldita", "NEX": 10, "efeito": "Atacar com ocultismo."}},
+                { "nome": "Intuitivo", "efeito": "Mente e alma blindadas contra o Outro Lado.", "poderes_trilha": { "nome": "Mente Sã", "NEX": 10, "efeito": "+5 de Resistência Paranormal."}}
             ],
             "poderes_classe": [
                 { "nome": "Escolhido pelo Outro Lado", "efeito": "Aprender 3 rituais iniciais/+1 conforme sobe de NEX"}

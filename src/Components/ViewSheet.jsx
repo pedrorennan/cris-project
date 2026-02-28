@@ -33,7 +33,7 @@ function ViewSheet({ agent, toAgents }) {
                 </div>
                 <div className="skillsInfo">
                     <h3>Habilidades</h3>
-                    <Skills className={String(agent.className)}></Skills>
+                    <Skills className={String(agent.className)} trilhaNome={String(agent.trilha)} nex={agent.nex}/>
                 </div>
             </main>
             <footer>
