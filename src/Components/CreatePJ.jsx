@@ -5,6 +5,7 @@ function CreatePJ({ sheetDone }) {
     const [namePJ, setName] = useState("")
     const [classPJ, setClass] = useState("")
     const [nexPJ, setNex] = useState("")
+    const [trilha, setTrilha] = useState("")
 
     const [atributes, setAtributes] = useState({
         forca: 0,
@@ -15,13 +16,14 @@ function CreatePJ({ sheetDone }) {
     })
 
     const save = () => {
-        if (namePJ && classPJ && nexPJ) {
+        if (namePJ && classPJ && nexPJ && trilha) {
             const newAgent = {
                 id: namePJ,
                 nome: namePJ,
                 className: classPJ,
                 nex: nexPJ,
-                atributos: atributes
+                atributos: atributes,
+                trilha: trilha
             }
             const atualAgents = JSON.parse(localStorage.getItem("agentes")) || [];
 
@@ -41,6 +43,7 @@ function CreatePJ({ sheetDone }) {
                 <div>
                     <input type="text" value={namePJ} onChange={(e) => { setName(e.target.value) }} placeholder='Nome do Agente' />
                     <input type="text" value={classPJ} onChange={(e) => { setClass(e.target.value) }} placeholder='Classe do Agente' />
+                    <input type="text" value={trilha} onChange={(e) => { setTrilha(e.target.value) }} placeholder='Trilha do Agente' />
                     <input type="text" value={nexPJ} onChange={(e) => { setNex(Number(e.target.value)) }} placeholder='NEX do Agente' />
                 </div>
                 <Atributes atributes={atributes} setAtributes={setAtributes} />

@@ -16,7 +16,7 @@ function RenderPJ({ selectAgent }) {
                 agents.map((agent, index) => (
                     <button key={agent.id || index} className="card-agente-btn" onClick={() => selectAgent(agent)}>
                         <h3>{agent.nome}</h3>
-                        <p>{agent.className}</p>
+                        <p>{agent.className}/{agent.trilha}</p>
                         <p>{agent.nex}%</p>
                     </button>
                 ))
