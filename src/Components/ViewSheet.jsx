@@ -1,6 +1,7 @@
 import "../Pages/Agents/style.css"
 import RollDice from "../Utils/RollDice"
 import Skills from './Skills'
+import DeletePJ from "../Utils/DeletePJ"
 
 function ViewSheet({ agent, toAgents }) {
     return (
@@ -10,9 +11,15 @@ function ViewSheet({ agent, toAgents }) {
             </header>
             <main>
                 <div className="mainSheetInfo">
-                    <h2>Nome: {agent.nome}</h2>
-                    <p>Classe: {agent.className}</p>
-                    <p>NEX: {agent.nex}%</p>
+                    <div>
+                        <h2>Nome: {agent.nome}</h2>
+                        <p>Classe: {agent.className}</p>
+                        <p>NEX: {agent.nex}%</p>
+                    </div>
+                    <button className="btnDeletePJ" onClick={() => {
+                        DeletePJ(agent.nome)
+                        toAgents()
+                    }}>Deletar personagem</button>
                 </div>
                 <div className="atributesInfo">
                     <p>Atributos</p>
